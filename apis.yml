@@ -1,23 +1,71 @@
 aid: asherbio
+
 name: Asherbio
-description: 'Asherbio is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://asherbio.com/wp-content/uploads/2021/03/home-page-card-Asher-032221.jpg
+
+description: 'Asherbio is a biopharmaceutical company focused on developing cis‑targeted immunotherapies that selectively activate immune cells to treat cancer and other diseases. Their platform aims to improve efficacy and reduce side effects by precisely targeting the immune response. Asher Bio’s pipeline includes candidates such as Etakafusp alfa, AB821, and AB359, with ongoing clinical collaborations and presentations at major oncology meetings. The company emphasizes innovative approaches to immune cell targeting, aiming to restore hope, health, and happiness for patients.'
+
 url: https://raw.githubusercontent.com/api-evangelist/asherbio/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
-- Company
-apis: []
+- Biopharma
+- Immunotherapy
+- Oncology
+- Cis-targeted
+- Biotechnology
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/asherbio-hosts.yml
+- type: Vendors
+  url: vendors/asherbio-vendors.yml
+- type: Newsroom
+  url: https://asherbio.com/news/
+- type: DomainSecurity
+  url: security/asherbio-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/asherbio
+  url: https://asherbio.com
+- type: TermsOfUse
+  url: https://asherbio.com/terms-of-use/
+- type: PrivacyPolicy
+  url: https://asherbio.com/privacy-policy/
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-09-26'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://equityzen.com/company/asherbio
+    status: 403
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
